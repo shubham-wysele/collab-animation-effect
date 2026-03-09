@@ -46,11 +46,15 @@
   }
 
   // ── Animate one card at localTime (time relative to its own start) ──
+  // Opacity: 0.5 → 1 over first 0.1 time-units (≈300ms at base speed), then stays 1
+  const OPACITY_FADE = 2 / 3; // ≈2 seconds at base speed (2000ms / 3000ms per unit)
+
   function animateCard(el, localTime, dir) {
-    const t = clamp(localTime / TOTAL, 0, 1);
-    el.style.opacity = 1;
+    const t       = clamp(localTime / TOTAL, 0, 1);
+    const opacity = localTime < OPACITY_FADE ? lerp(0.2, 1, localTime / OPACITY_FADE) : 1;
+    el.style.opacity   = opacity;
     el.style.transform = `translateX(${lerp(0, dir * 100, t)}vw) scale(${lerp(0.4, 1.2, t)})`;
-    el.style.filter = "none";
+    el.style.filter    = "none";
   }
 
   function resetCard(el) {
