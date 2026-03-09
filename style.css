@@ -63,14 +63,15 @@ body {
 }
 
 .label-collaboration {
-  font-family: monospace;
-  font-size: 2rem;
-  text-transform: uppercase;
-  /* letter-spacing: 0.4em; */
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.6rem;
+  font-weight: 600;
   color: #1c1917;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.4);
-  font-weight: normal;
   text-align: center;
+  letter-spacing: 0.02em;
+  /* underline accent matching reference */
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid #1c1917;
 }
 
 .label-row {
@@ -84,13 +85,11 @@ body {
 .label-national,
 .label-international {
   position: absolute;
-  font-family: monospace;
-  font-size: 2rem;
-  text-transform: uppercase;
-  /* letter-spacing: 0.4em; */
-  color: #1c1917;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
-  font-weight: normal;
+  font-family: 'Lato', Arial, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a56db;
+  letter-spacing: 0.04em;
   transform: translateX(-50%);
 }
 
@@ -115,7 +114,7 @@ body {
 /* ── Logo Cards ───────────────────────────────────────── */
 .logo-card {
   position: absolute;
-  width: clamp(16rem, 20vw, 20rem);
+  width: clamp(20rem, 24vw, 24rem);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -125,6 +124,7 @@ body {
   box-shadow: 0 10px 40px rgba(0,0,0,0.15);
   opacity: 0;
   padding-bottom: 1rem;
+  cursor: pointer;
 }
 
 .logo-card img {
@@ -135,12 +135,13 @@ body {
 }
 
 .logo-name {
-  font-family: monospace;
-  font-size: 0.9rem;
+  font-family: 'Lato', Arial, sans-serif;
+  font-size: 1.85rem;
+  font-weight: 400;
   text-align: center;
   color: #1c1917;
   padding: 0 1rem;
-  line-height: 1.4;
+  line-height: 1.45;
 }
 
 /* ── After Section ────────────────────────────────────── */
